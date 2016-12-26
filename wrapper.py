@@ -58,5 +58,4 @@ class Firebase(object):
 
         response = urlfetch.fetch(url, method=method, **kwargs)
 
-        print url
         return json.loads(response.content)
