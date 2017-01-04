@@ -2,7 +2,6 @@ import urllib
 import json
 from google.appengine.api import urlfetch
 
-
 class Firebase(object):
 
     def __init__(self, root_url, auth_token):
@@ -24,8 +23,8 @@ class Firebase(object):
     def remove(self):
         return self.delete()
 
-    def get(self):
-        return self._request(urlfetch.GET)
+    def get(self, **kwargs):
+        return self._request(urlfetch.GET, params=kwargs)
 
     def post(self, payload):
         return self._request(urlfetch.POST, payload=payload)
