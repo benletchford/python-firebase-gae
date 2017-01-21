@@ -4,7 +4,7 @@ from google.appengine.api import urlfetch
 
 class Firebase(object):
 
-    def __init__(self, root_url, auth_token):
+    def __init__(self, root_url, auth_token=None):
         self.root_url = root_url
         self.auth_token = auth_token
 
